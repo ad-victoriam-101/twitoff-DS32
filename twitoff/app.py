@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from .models import DB, User, Tweet
-
+from .env import TWITTER_API_KEY,TWITTER_API_KEY_SECRET
 
 def create_app():
     # initializes our app
