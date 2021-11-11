@@ -30,9 +30,7 @@ def create_app():
         usernames = get_all_usernames()
         for username in usernames:
             add_or_update_user(username)
-        return """All users have been updated!!
-            <a href="/" class="brand"><span>TwitOff!</span></a>
-        """
+        return render_template('base.html',title= 'Update')
 
     @app.route('/reset')
     def reset():
